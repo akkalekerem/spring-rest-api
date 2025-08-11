@@ -42,5 +42,19 @@ public class EmployeeRepository {
         }
         return filteredEmployees;
     }
+
+    public Employee saveEmployee(Employee newEmployee){
+        employeeList.add(newEmployee);
+        return newEmployee;
+    }
+
+    public boolean deleteEmployee(String id) {
+        Employee employeeToDelete = getEmployeeById(id);
+        if (employeeToDelete != null) {
+            employeeList.remove(employeeToDelete);
+            return true;
+        }
+        return false;
+    }
 }
 

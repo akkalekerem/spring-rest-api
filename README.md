@@ -40,3 +40,13 @@ IOC (Inversion of Controll) = Bean oluşturma.
 @RequestMapping = Hepsinin ortak kökü ("/rest/api")
 
 @PathVariable = public Employee getEmployeeById(@PathVariable(name = "id", required = true) String id){
+
+@RequestParam = HTTP istediğinde "?" den sonra bu parametrelere bakar  
+Örnek:public List<Employee> getEmployeeWithParams(@RequestParam(name = "firstName") String firstName,
+@RequestParam(name = "lastName") String lastName)
+
+For-Each döngüsünün mantığı ve kullanımını öğrendim.
+
+@RequestBody = Dışarıdan değer alıp içeri kaydeder.
+
+Not: Rest API'lar birbirleri arasında JSON formatında haberleşirler.
