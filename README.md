@@ -52,4 +52,5 @@ For-Each döngüsünün mantığı ve kullanımını öğrendim.
 Not: Rest API'lar birbirleri arasında JSON formatında haberleşirler.
 
 CRUD işlemleri olan   
-@GetMapping, @PostMapping, ve @DeleteMapping  Eklendi.
+@GetMapping, @PostMapping, ve @DeleteMapping  Eklendi.  
+@PutMapping = Güncellemek için

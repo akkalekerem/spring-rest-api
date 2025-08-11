@@ -1,6 +1,7 @@
 package com.keremakkale.repository;
 
 import com.keremakkale.model.Employee;
+import com.keremakkale.model.UpdateEmployeeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -55,6 +56,33 @@ public class EmployeeRepository {
             return true;
         }
         return false;
+    }
+
+    private Employee findEmployeeById(String id) {
+        Employee findEmployee = null;
+        for (Employee employee : employeeList){
+            if(employee.getId().equals(id)){
+                findEmployee = employee;
+                break;
+            }
+        }
+        return findEmployee;
+    }
+
+    public Employee updateEmployee(String id, UpdateEmployeeRequest updatedEmployee){
+        Employee findEmployee = findEmployeeById(id);
+        if (findEmployee != null) {
+            deleteEmployee(id);
+
+            Employee newEmployee = new Employee();
+            newEmployee.setId(id);
+            newEmployee.setFirstName(updatedEmployee.getFirstName());
+            newEmployee.setLastName(updatedEmployee.getLastName());
+
+            employeeList.add(newEmployee);
+            return newEmployee;
+        }
+        return null;
     }
 }
 

@@ -1,6 +1,7 @@
 package com.keremakkale.services;
 
 import com.keremakkale.model.Employee;
+import com.keremakkale.model.UpdateEmployeeRequest;
 import com.keremakkale.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,5 +33,9 @@ public class EmployeeService {
 
     public boolean deleteEmployee(String id){
         return employeeRepository.deleteEmployee(id);
+    }
+
+    public Employee updateEmployee(String id, UpdateEmployeeRequest updatedEmployee){
+        return employeeRepository.updateEmployee(id, updatedEmployee);
     }
 }
