@@ -50,3 +50,6 @@ For-Each döngüsünün mantığı ve kullanımını öğrendim.
 @RequestBody = Dışarıdan değer alıp içeri kaydeder.
 
 Not: Rest API'lar birbirleri arasında JSON formatında haberleşirler.
+
+CRUD işlemleri olan   
+@GetMapping, @PostMapping, ve @DeleteMapping  Eklendi.
