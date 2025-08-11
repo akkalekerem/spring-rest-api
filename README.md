@@ -35,4 +35,8 @@ Repository : Veritabanına erişmek için kullanılan katmadır. ID : 5766 olan 
 
 Dependency Injection = Bean'i alıp herhangi bir class'a enjecte etmek.
 
-IOC (Inversion of Controll) = Bean oluşturma.
+IOC (Inversion of Controll) = Bean oluşturma.  
+
+@RequestMapping = Hepsinin ortak kökü ("/rest/api")
+
+@PathVariable = public Employee getEmployeeById(@PathVariable(name = "id", required = true) String id){
