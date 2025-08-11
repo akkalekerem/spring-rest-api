@@ -4,6 +4,7 @@ import com.keremakkale.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.keremakkale.services.EmployeeService;
 @Repository
@@ -26,4 +27,20 @@ public class EmployeeRepository {
         }
         return findEmployee;
     }
+
+    public List<Employee> getEmployeeWithParams(String firstName, String lastName) {
+        List<Employee> filteredEmployees = new ArrayList<>();
+
+        if (firstName == null && lastName == null) {
+            return employeeList;
+        }
+        for (Employee employee : employeeList) {
+            if (firstName.equals(employee.getFirstName()) && lastName.equals(employee.getLastName())) {
+                filteredEmployees.add(employee);
+            }
+
+        }
+        return filteredEmployees;
+    }
 }
+
