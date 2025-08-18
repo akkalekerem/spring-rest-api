@@ -54,3 +54,12 @@ Not: Rest API'lar birbirleri arasında JSON formatında haberleşirler.
 CRUD işlemleri olan   
 @GetMapping, @PostMapping, ve @DeleteMapping  Eklendi.  
 @PutMapping = Güncellemek için
+
+Spring Data JPA = Veri tabanına bağlanmamızı sağlayan ara katman.
+Veri tabanına projemiz üzerinden bağlanıp insert, update, delete  ,get gibi işlemler yapmamıza olanak sağlar.
+
+yeni bir class oluştururken @Entity kullanarak classımızı tabloya dönüştürüyoruz ve içinde oluşturduğumuz değişkenler de o tablonun sütunları olmuş oluyor. 
+
+JpaRepository (interface) = Veri tabanına erişim için kullanılan arayüz. Bu arayüzü kullanarak veri tabanına erişebiliriz.  
+HIBERNATE = Java Persistence API (JPA) uygulaması. JPA, Java'da nesne-ilişkisel haritalama (ORM) için bir standarttır.  sP 
+Java classımızı Veritabanına ORM aracılığıyla bağlıyoruz.
